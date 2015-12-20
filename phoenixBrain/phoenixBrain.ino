@@ -367,7 +367,7 @@ void MadgwickQuaternionUpdate(float ax, float ay, float az, float gx, float gy, 
             q[3] = q4 * norm;
 
 }
-
+/*
 void MahonyQuaternionUpdate(float ax, float ay, float az, float gx, float gy, float gz, float mx, float my, float mz)
         {
             float q1 = q[0], q2 = q[1], q3 = q[2], q4 = q[3];   // short name local variable for readability
@@ -458,7 +458,7 @@ void MahonyQuaternionUpdate(float ax, float ay, float az, float gx, float gy, fl
             q[2] = q3 * norm;
             q[3] = q4 * norm;
  
-}
+} */
 
 int computePorportionalGain(int setPoint, int gain, float actualPoint){
   return (actualPoint - setPoint) * gain;  
@@ -621,7 +621,7 @@ void loop()
       
     // Serial print and/or display at 0.5 s rate independent of data rates
     delt_t = millis() - count;
-    if (delt_t > 500) { // update LCD once per half-second independent of read rate
+    if (delt_t > 0) { // update LCD once per half-second independent of read rate
 
     /*if(SerialDebug) {
     Serial.print("ax = "); Serial.print((int)1000*ax);  
